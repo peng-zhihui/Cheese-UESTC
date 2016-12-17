@@ -4,7 +4,11 @@
 
 ## 布局效果演示（GIF图较大请耐心等待加载，加载失败请刷新...）
 
-![effect](http://p1.bqimg.com/4851/39a5b9c741d36e45.gif)
+![gif-8MB](http://p1.bqimg.com/4851/39a5b9c741d36e45.gif)
+
+![pic1](http://i1.piimg.com/1949/4d984621bc5a6440.png)
+
+![pic2](http://i1.piimg.com/1949/1ace4cf3050ee9ae.png)
 
 
 ## 目前已接入的内容
