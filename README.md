@@ -6,7 +6,7 @@
 
 ![gif-8MB](http://p1.bqimg.com/4851/39a5b9c741d36e45.gif)
 
-![pic1](http://i1.piimg.com/1949/4d984621bc5a6440.png)   ![pic2](http://i1.piimg.com/1949/1ace4cf3050ee9ae.png)
+![pic1](http://i1.piimg.com/567571/fdc05eca186b4d62.jpg) 
 
 
 ## 目前已接入的内容
