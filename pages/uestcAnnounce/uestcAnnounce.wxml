@@ -36,7 +36,7 @@
   <view class="tips">
     <view wx:if="{{hasMore}}">
       <image src="../img/loading.gif" mode="aspectFill" />
-      <text>玩了命的加载中...</text>
+      <text> </text>
     </view>
 
     <!--<view wx:else><text>没有更多内容了</text></view>-->
