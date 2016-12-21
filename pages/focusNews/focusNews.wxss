@@ -1,3 +1,37 @@
+/* pages/uestcAnnounce/uestcAnnounce.wxss */
+/*.page_list {
+    height:100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}*/
+
+/*.item{
+    display: flex;
+    flex-direction:column;
+    padding: 20rpx 40rpx;
+    border-bottom: 1rpx solid #eee;
+    cursor: pointer;
+}*/
+
+/*.news-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 1px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-bottom: 1px solid #d0d0d0;
+  border-radius: 2px;
+}*/
+
+
 .title {
     /*margin-left: 20px;*/
     display: block;

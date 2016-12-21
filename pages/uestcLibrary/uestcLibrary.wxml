@@ -1,0 +1,35 @@
+
+<!--pages/uestcNews/uestcNews.wxml-->
+
+<!--pages/uestcAnnounce/uestcAnnounce.wxml-->
+<import src="/wxSearch/wxSearch.wxml" />
+<view class="mainFrame">
+  <view class="wxSearch-section">
+    <view class="wxSearch-pancel">
+      <input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="馆藏搜索"  bindblur="wxSearchBlur" class="wxSearch-input" placeholder="搜索" />
+      <button class="wxSearch-button" bindtap="wxSearchFn" size="mini" plain="true">搜索</button>
+    </view>
+  </view>
+  <template is="wxSearch" data="{{wxSearchData}}" />
+  <scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refresh">
+    <view wx:for="{{newList}}">
+      <view class="allItem" data-detail-href="{{item.time}}">
+
+        <!--封面-->
+        <view class="bookcover">
+          <image class="bookcover" src="../../image/labraryBookCover.png" mode="aspectFit"></image>
+          <view class="booknum">{{item.booknum}}</view>
+        </view>
+
+        <!--右侧内容-->
+        <view class="content">
+          <view class="title">{{item.title}}</view>
+          <view class="content2">
+            <view class="status">{{item.status}} | 剩余</view>
+            <view class="lasttime">{{item.lasttime}}天</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

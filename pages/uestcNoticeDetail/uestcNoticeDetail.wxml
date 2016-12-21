@@ -1,13 +1,31 @@
-
 <!--pages/uestcNewsDetail/uestcNewsDetail.wxml-->
-<import src="../../wxParse/wxParse.wxml" />
+
+<import src="../../wxParse/wxParse.wxml"/> 
+
 <view class="firstRow">
+<!--<text>uestcNewsDetail.wxml，地址：{{currentHtmlAddress}}</text>-->
 
-  <!--<text>uestcNewsDetail.wxml，地址：{{currentHtmlAddress}}</text>-->
+<!--显示详细网页内容-->
+<!--这里data中article为bindName-->
+<view class="wxParse">
+  
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<!--这里data中article为bindName-->
+<!--<view class="wxParse">
+    
+    <template is="wxParse" data="{{wxParseData:article2.nodes}}"/>
+</view>-->
 
-  <!--显示详细网页内容-->
+<!--<view style="padding: 20px 10px; background-color:#eee;">
+    <block wx:for="{{replyTemArray}}" wx:key="">
+        回复{{index}}:<template is="wxParse" data="{{wxParseData:item}}"/>
+    </block>
+</view>-->
 
-  <!--这里data中article为bindName-->
-  <view class="wxParse">
-    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
-  </view>
+
+
+
+
+
+

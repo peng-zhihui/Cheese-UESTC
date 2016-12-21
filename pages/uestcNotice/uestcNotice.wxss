@@ -13,7 +13,8 @@
   padding: 20rpx 20rpx;
   border-bottom: 1rpx solid #eee;
   cursor: pointer;
-  background: #fbf9fe;
+
+  background:#fbf9fe;
 }
 
 .news-item {
@@ -31,7 +32,8 @@
   border: 2px solid #f0f0f0;
   box-shadow: 10px 10px 10px #e0e0e0;
   border-radius: 10px;
-  background: #fff;
+
+  background:#fff;
 }
 
 .title {
@@ -51,6 +53,7 @@
   text-align: right;
   padding-right: 30rpx;
   color: #ccc;
+
 }
 
 .desc {

@@ -1,30 +1,30 @@
 // pages/uestcNews/uestcNews.js
 Page({
-    data: {
-        newList: [],
-    },
-    onLoad: function (options) {
-        // 页面初始化 options为页面跳转所带来的参数
+  data:{
+      newList:[],
+  },
+  onLoad:function(options){
+    // 页面初始化 options为页面跳转所带来的参数
 
-        var that = this;
-        requestData(that, "");
-    },
-    onReady: function () {
-        // 页面渲染完成
-    },
-    onShow: function () {
-        // 页面显示
-    },
-    onHide: function () {
-        // 页面隐藏
-    },
-    onUnload: function () {
-        // 页面关闭
-    },
+    var that = this;
+    requestData(that, "");
+  },
+  onReady:function(){
+    // 页面渲染完成
+  },
+  onShow:function(){
+    // 页面显示
+  },
+  onHide:function(){
+    // 页面隐藏
+  },
+  onUnload:function(){
+    // 页面关闭
+  },
 
 
-    onItemClick: function (event) {
-        var targetUrl = "/pages/uestcNoticeDetail/uestcNoticeDetail"
+  onItemClick: function (event) {
+      var targetUrl="/pages/uestcNoticeDetail/uestcNoticeDetail"
         if (event.currentTarget.dataset.detailHref != null)
             targetUrl = targetUrl + "?navigateURL=" + event.currentTarget.dataset.detailHref.substr(2);
 
@@ -43,21 +43,21 @@ Page({
 function requestData(that, targetPage) {
     wx.request({
         //连到服务器 获取json格式的文档
-        url: Constant.SERVER_ADDRESS + "/notice",
+        url: Constant.SERVER_ADDRESS+"/notice",
         header: {
             "Content-Type": "application/json"
         },
         success: function (res) {
-            if (res == null) {
+            if (res == null) {  
                 console.error(Constant.ERROR_DATA_IS_NULL);
                 return;
             }
-            for (var i = 0; i <= res.data.htmlBody.length; i++) {
-                _body: res.data.htmlBody
+            for(var i=0;i<=res.data.htmlBody.length;i++){
+                _body:res.data.htmlBody
             }
-            that.setData({
+             that.setData({
                 newList: res.data.htmlBody,
-            })
+             })
 
         }
     });
