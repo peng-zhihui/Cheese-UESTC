@@ -8,7 +8,7 @@
 
 ![gif-8MB](http://p1.bpimg.com/1949/dbbca42e069b8c52.gif) ![pic1](http://i1.piimg.com/567571/d19ba6b7cea967e1.png) 
 
-![pic1](http://i1.piimg.com/567571/0b58cea762af9960.png)
+![pic1](http://i1.piimg.com/1949/0b58cea762af9960.png)
 
 
 ## 目前已接入的内容
