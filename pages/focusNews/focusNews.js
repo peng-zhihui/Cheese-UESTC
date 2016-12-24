@@ -40,7 +40,7 @@ Page({
 
     //     this.getDataFromServer(that,this.data.page)
     // }
-    if(current==(volsLength-2)){
+    if(current>(volsLength-5)){
         this.setData({page: this.data.page + 1})
 
         console.log("上拉拉加载更多...." + this.data.page)
@@ -80,12 +80,12 @@ Page({
                     console.error(Constant.ERROR_DATA_IS_NULL);
                     return;
                 }
-                // for(var i=0;i<=res.data.htmlBody.length;i++){
-                //     _body:res.data.htmlBody
-                // }
-                that.setData({
-                    caiItems:that.data.caiItems.concat(res.data.htmlBody) , loading: true, hasMore: false
+                if(res.data.htmlBody.length>0){
+                    that.setData({
+                        caiItems:that.data.caiItems.concat(res.data.htmlBody) , loading: true, hasMore: false
                 })
+                }
+                
             }
         });
     },
@@ -94,8 +94,8 @@ Page({
     //点击 跳转到具体页面
      onItemClick: function (event) {
       var targetUrl="/pages/focusNewsDetail/focusNewsDetail"
-        if (event.currentTarget.dataset.detailHref != null)
-            targetUrl = targetUrl + "?navigateURL=" + event.currentTarget.dataset.detailHref.substr(2);
+        if (event.currentTarget.dataset.detailHrefId != null)
+            targetUrl = targetUrl + "?Id=" + event.currentTarget.dataset.detailHrefId;
 
         wx.navigateTo({
             url: targetUrl

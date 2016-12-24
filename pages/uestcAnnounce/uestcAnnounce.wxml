@@ -1,45 +1,24 @@
-
-<!--pages/uestcAnnounce/uestcAnnounce.wxml-->
 <scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refresh">
-    <swiper indicator-dots="{{imageimageList}}" autoplay="true" interval="3000" duration="1000">
-      <block wx:for="{{imageimageList}}">
-        <swiper-item class="banner">
-          <image src="http://www.news.uestc.edu.cn{{item.imgHref}}" class="slide-image" style="width:100%; height:100%;" mode="aspectFill" />
-        </swiper-item>
-      </block>
-    </swiper>
 
+  <!--上方图片-->
+  <swiper indicator-dots="{{imageimageList}}" autoplay="true" interval="3000" duration="1000">
+    <block wx:for="{{imageimageList}}">
+      <swiper-item class="banner">
+        <image src="http://www.news.uestc.edu.cn{{item.imgHref}}" class="slide-image" style="width:100%; height:100%;" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
 
-  <!--对于ListView总结就是，navigator外一层布局，然后navigator里边只有一个组件-->
+  <!--瀑布流列表-->
   <view wx:for="{{caiItems}}">
-
-    <!--<navigator url="../newDetail/newDetail?id={{item.menuId}}">
-            <view class="item">
-                <image src="{{item.thumbnail}}" mode="scaleToFill"></image>
-                <text>{{item.name}}</text>
-            </view>
-        </navigator>-->
-    
-
-
-    <view data-detail-href="{{item.detailHref}}" class="item" bindtap="onItemClick">
+    <view data-detail-href-Id="{{item.detailHrefId}}" class="item" bindtap="onItemClick">
       <view class="news-item">
         <view class="title">{{item.title}}</view>
         <text class="time">{{item.time}}</text>
         <view class="desc">{{item.desc}}</view>
-
-        <!--<view class="detailHref">{{item.detailHref}}</view>
-            <view class="imgHref">{{item.imgHref}}</view>-->
       </view>
     </view>
   </view>
-  <view class="tips">
-    <view wx:if="{{hasMore}}">
-      <image src="../img/loading.gif" mode="aspectFill" />
-      <text> </text>
-    </view>
 
-    <!--<view wx:else><text>没有更多内容了</text></view>-->
-  </view>
 </scroll-view>
 <loading hidden="{{loading}}">加载中...</loading>

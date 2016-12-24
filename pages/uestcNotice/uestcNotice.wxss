@@ -7,6 +7,7 @@
   flex-direction: column;
 }
 
+/*瀑布流列表 开始*/
 .item {
   display: flex;
   flex-direction: column;
@@ -63,13 +64,4 @@
   color: #34495e;
   padding: 20rpx;
 }
-
-.tips image {
-  width: 40rpx;
-  height: 40rpx;
-  margin-right: 20rpx;
-}
-
-.tips image, .tips text {
-  vertical-align: middle;
-}
+/*瀑布流列表 结束*/

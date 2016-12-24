@@ -1,27 +1,14 @@
-<!--pages/uestcNews/uestcNews.wxml-->
+<scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refresh">
 
-<!--pages/uestcAnnounce/uestcAnnounce.wxml-->
-<scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore"
-             bindscrolltoupper="refresh">
-    <!--对于ListView总结就是，navigator外一层布局，然后navigator里边只有一个组件-->
-    <view wx:for="{{newList}}">
-        <!--<navigator url="../newDetail/newDetail?id={{item.menuId}}">
-            <view class="item">
-                <image src="{{item.thumbnail}}" mode="scaleToFill"></image>
-                <text>{{item.name}}</text>
-            </view>
-        </navigator>-->
-        <view data-detail-href="{{item.detailHref}}" class="item"  bindtap="onItemClick">
-        <view class="news-item">
-            <view class="title">{{item.title}}</view>
-            <text class="time">{{item.time}}</text>
-            <view class="desc">{{item.desc}}</view>
-            <!--<view class="detailHref">{{item.detailHref}}</view>
-            <view class="imgHref">{{item.imgHref}}</view>-->
-            </view>
-        </view>
+  <view wx:for="{{newList}}">
+
+    <view data-detail-href-id="{{item.detailHrefId}}" class="item" bindtap="onItemClick">
+      <view class="news-item">
+        <view class="title">{{item.title}}</view>
+        <text class="time">{{item.time}}</text>
+        <view class="desc">{{item.desc}}</view>
+
+      </view>
     </view>
+  </view>
 </scroll-view>
-
-
-

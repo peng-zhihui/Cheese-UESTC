@@ -1,20 +1,39 @@
 // pages/uestcNews/uestcNews.js
 //获取应用实例
-var WxSearch = require('../../wxSearch/wxSearch.js')
 var app = getApp()
 Page({
   data: {
     newList: [],
+    userName:'',  
+    userPassword:'',  
+    loginStyle:'',
+    testString:'testString',
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
+    this.setData({
+          userName:options.userName,
+          userPassword:options.userPassword,
+          loginStyle:options.loginStyle,
+    });
+
 
     var that = this;
     requestData(that, "");
-
-    //初始化的时候渲染wxSearchdata
-    WxSearch.init(that, 43, ['weappdev', '小程序', 'wxParse', 'wxSearch', 'wxNotification']);
-    WxSearch.initMindKeys(['weappdev.com', '微信小程序开发', '微信开发', '微信小程序']);
+    // 获取缓存信息
+    var values = wx.getStorageSync('LibraryUserInfo')
+    if(values!=null){
+      values=values.split('&');
+      var userName=values[0]
+      var userPassword=values[1]
+      var loginStyle=values[2]
+       this.setData({
+          userName:userName,  
+          userPassword:userPassword,  
+          loginStyle:loginStyle,
+       })
+    }
+   
   },
   onReady: function () {
     // 页面渲染完成
@@ -38,41 +57,6 @@ Page({
     wx.navigateTo({
       url: targetUrl
     });
-  },
-
-
-  wxSearchFn: function (e) {
-    var that = this
-    WxSearch.wxSearchAddHisKey(that);
-
-  },
-  wxSearchInput: function (e) {
-    var that = this
-    WxSearch.wxSearchInput(e, that);
-  },
-  wxSerchFocus: function (e) {
-    var that = this
-    WxSearch.wxSearchFocus(e, that);
-  },
-  wxSearchBlur: function (e) {
-    var that = this
-    WxSearch.wxSearchBlur(e, that);
-  },
-  wxSearchKeyTap: function (e) {
-    var that = this
-    WxSearch.wxSearchKeyTap(e, that);
-  },
-  wxSearchDeleteKey: function (e) {
-    var that = this
-    WxSearch.wxSearchDeleteKey(e, that);
-  },
-  wxSearchDeleteAll: function (e) {
-    var that = this;
-    WxSearch.wxSearchDeleteAll(that);
-  },
-  wxSearchTap: function (e) {
-    var that = this
-    WxSearch.wxSearchHiddenPancel(that);
   }
 })
 
@@ -86,6 +70,12 @@ function requestData(that, targetPage) {
   wx.request({
     //连到服务器 获取json格式的文档
     url: Constant.SERVER_ADDRESS + "/library",
+    data: {  
+        username: that.data.userName,  
+        password: that.data.userPassword,  
+        loginstyle:that.data.loginStyle,
+      },  
+    method: 'GET',  
     header: {
       "Content-Type": "application/json"
     },
@@ -94,11 +84,12 @@ function requestData(that, targetPage) {
         console.error(Constant.ERROR_DATA_IS_NULL);
         return;
       }
-      for (var i = 0; i <= res.data.htmlBody.length; i++) {
-        _body: res.data.htmlBody
-      }
+      // for (var i = 0; i <= res.data.htmlBody.length; i++) {
+      //   _body: res.data.htmlBody
+      // }
       that.setData({
         newList: res.data.htmlBody,
+        testString:res.data.testString
       })
 
     }

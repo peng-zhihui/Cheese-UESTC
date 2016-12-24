@@ -1,4 +1,3 @@
-// pages/uestcAnnounceDetail/uestcAnnounceDetail.js
 //在使用的View中引入WxParse模块
 var WxParse = require('../../wxParse/wxParse.js');
 

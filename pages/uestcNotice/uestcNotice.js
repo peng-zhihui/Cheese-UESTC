@@ -24,9 +24,10 @@ Page({
 
 
   onItemClick: function (event) {
-      var targetUrl="/pages/uestcNoticeDetail/uestcNoticeDetail"
-        if (event.currentTarget.dataset.detailHref != null)
-            targetUrl = targetUrl + "?navigateURL=" + event.currentTarget.dataset.detailHref.substr(2);
+    //   var targetUrl="/pages/uestcNoticeDetail/uestcNoticeDetail"
+    var targetUrl="/pages/focusNewsDetail/focusNewsDetail"
+        if (event.currentTarget.dataset.detailHrefId != null)
+            targetUrl = targetUrl + "?Id=" + event.currentTarget.dataset.detailHrefId;
 
         wx.navigateTo({
             url: targetUrl

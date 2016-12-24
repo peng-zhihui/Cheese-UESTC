@@ -1,7 +1,4 @@
-/* pages/uestcLibrary/uestcLibrary.wxss */
 
-/* pages/uestcAnnounce/uestcAnnounce.wxss */
-@import "/wxSearch/wxSearch.wxss";
 .page_list {
   height: 100%;
   display: flex;
@@ -13,21 +10,32 @@
 .allItem {
   display: flex;
   flex-direction: row;
-  padding: 20rpx 0rpx;
-  border: 10rpx solid #eee;
+  padding: 0rpx 0rpx;
+  border: 5rpx solid #eee;
   cursor: pointer;
   background: #fbf9fe;
 }
 
-/*控制每栏的高度*/
-
+/*图书封皮*/
 .bookcover {
   width: 120px;
+  /*控制每栏的高度*/
   height: 150px;
   display: flex;
   flex-direction: column;
 }
+/*左侧索书号*/
+.booknum {
+  text-indent: 0em;
+  font-size: 30rpx;
+  font-family: 'Microsoft YaHei';
+  text-align: center;
+  margin-bottom: 20rpx;
+  color: #000;
+  padding: 0rpx;
+}
 
+/*右侧整体内容*/
 .content {
   display: flex;
   flex-direction: column;
@@ -41,7 +49,6 @@
 }
 
 /*标题*/
-
 .title {
   margin-top: 10rpx;
   margin-left: 10rpx;
@@ -52,7 +59,7 @@
   font-family: 'KaiTi';
   font-size: 33rpx;
 }
-
+/*到期时间及剩余日期 外框*/
 .content2 {
   display: flex;
   flex-direction: row;
@@ -61,28 +68,8 @@
   height: 70rpx;
 }
 
-.statusAndBooknum {
-  display: flex;
-  flex-direction: row;
-  /*flex-wrap:nowrap;*/
-  margin-top: 0px;
-  padding-top: 0px;
-}
-
-/*索书号*/
-
-.booknum {
-  text-indent: 0em;
-  font-size: 30rpx;
-  font-family: 'Microsoft YaHei';
-  text-align: center;
-  margin-bottom: 20rpx;
-  color: #000;
-  padding: 0rpx;
-}
 
 /*到期日期*/
-
 .status {
   font-size: 31rpx;
   font-family: 'Microsoft YaHei';
@@ -91,6 +78,7 @@
   color: #ddd;
 }
 
+/*剩余日期*/
 .lasttime {
   font-size: 45rpx;
   font-family: 'Microsoft YaHei';

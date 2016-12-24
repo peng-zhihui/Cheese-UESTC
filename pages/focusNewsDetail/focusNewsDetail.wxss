@@ -1,7 +1,3 @@
-/* pages/uestcAnnounceDetail/uestcAnnounceDetail.wxss */
-/* pages/uestcNewsDetail/uestcNewsDetail.wxss */
-@import "../../js/wxgrid.wxss";
-/*//在使用的Wxss中引入WxParse.css,可以在app.wxss*/
 @import "../../wxParse/wxParse.wxss";
 .firstRow{
     /*width: 100%;*/
@@ -26,4 +22,12 @@
 
 
 
+table {
+width: 600px;
+border-collapse: collapse;
+}
+
+th, td {
+border: none;
+}
 
