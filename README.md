@@ -6,7 +6,7 @@
 
 ## UI布局效果及功能演示（GIF图较大请耐心等待加载，加载失败请刷新...）
 
-![gif-8MB](http://p1.bpimg.com/1949/dbbca42e069b8c52.gif)          ![pic1](http://p1.bpimg.com/1949/5a92fe8eac0426c7.jpg) 
+![gif-8MB](http://p1.bpimg.com/1949/dbbca42e069b8c52.gif)        ![pic1](http://p1.bqimg.com/1949/31a866991e2c5ffe.jpg) 
 
 ![pic1](http://p1.bpimg.com/1949/e4194fadbb226c28.jpg)
 
