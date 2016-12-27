@@ -1,7 +1,7 @@
 <!--<view class="mainFrame">-->
   <view >{{tip}}</view>
-  <scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refresh">
-    <view wx:for="{{bookSearch}}">
+  <!--<scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refresh">-->
+    <view class="page_list" wx:for="{{bookSearch}}">
       <view class="allItem" data-detail-href="{{item.time}}">
 
         <!--封面-->
@@ -29,16 +29,16 @@
               <!--具体的条码位置 如几排几列列 需要内网才能查到-->
               <view class="bookBarCode"> 条码和位置</view>
             </view>
-            <scroll-view class="page_list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refresh" wx:for="{{item.bookRecords}}">
+            <view class="page_list"  wx:for="{{item.bookRecords}}">
               <view class="bookRecords" style="display:flex;flex-direction:row;">
                 <view class="bookAddress"> {{item.bookAddress}}</view>
                 <view class="bookStatus"> {{item.bookStatus}}</view>
                 <view class="bookBarCode"> {{item.bookBarCode}}</view>
               </view>
-            </scroll-view>
+            </view>
           </view>
         </view>
       </view>
     </view>
-  </scroll-view>
+  <!--</scroll-view>-->
 <!--</view>-->

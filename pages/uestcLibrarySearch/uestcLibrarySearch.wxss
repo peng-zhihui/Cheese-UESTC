@@ -41,7 +41,7 @@
 .content {
   display: flex;
   flex-direction: column;
-
+width: 100%;
   box-shadow: 10px 10px 10px #e0e0e0;
   background: #423f3a;
 }
